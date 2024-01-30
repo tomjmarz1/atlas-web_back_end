@@ -25,6 +25,11 @@ def get_locale():
         return locale
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
+@app.before_request
+def before_request():
+    """ Set/get current language from request """
+    g.locale = str(get_locale())
+    refresh()
 
 @app.route('/', strict_slashes=False)
 def index():
