@@ -1,4 +1,4 @@
-var calculateNumber = require('./0-calcul-0')
+var calculateNumber = require('./0-calcul')
 
 var assert = require('assert');
 
