@@ -42,7 +42,7 @@ class Server:
         dataset = self.dataset()
         # page_size = len(dataset[start_index:end_index])
         data = dataset[start_index:end_index]
-        total_pages = round(len(dataset) / page_size)
+        
         if page_size == 0:
             total_pages = 195
         else:
